@@ -1,28 +1,32 @@
 import Link from "next/link";
 import Image from "next/image";
-import logoImg from '@/assets/logo.png'
+import logoImg from "@/assets/logo.png";
 
-import style from './main-header.module.css'
+import style from "./main-header.module.css";
 import MainHeaderBackground from "./main-header-background";
-
+import NavLink from "./nav-link";
 
 export default function MainHeader() {
   return (
     <>
-    <MainHeaderBackground />
-    <header className={style.header}>
+      <MainHeaderBackground />
+      <header className={style.header}>
         <Link className={style.logo} href="/">
-            <Image src={logoImg} alt="A plate with food on it" priority />
-            Nextlevel Food
+          <Image src={logoImg} alt="A plate with food on it" priority />
+          Nextlevel Food
         </Link>
 
         <nav className={style.nav}>
-            <ul>
-                <li><Link href="/meals">BrowseMeals</Link></li>
-                <li><Link href="/community">Foodies Community</Link></li>
-            </ul>
+          <ul>
+            <li>
+              <NavLink href="/meals">Browse Meals</NavLink>
+            </li>
+            <li>
+              <NavLink href="/community">Community</NavLink>
+            </li>
+          </ul>
         </nav>
-    </header>
+      </header>
     </>
-  )
+  );
 }
