@@ -3,10 +3,13 @@ import Image from "next/image";
 import logoImg from '@/assets/logo.png'
 
 import style from './main-header.module.css'
+import MainHeaderBackground from "./main-header-background";
 
 
 export default function MainHeader() {
   return (
+    <>
+    <MainHeaderBackground />
     <header className={style.header}>
         <Link className={style.logo} href="/">
             <Image src={logoImg} alt="A plate with food on it" priority />
@@ -20,5 +23,6 @@ export default function MainHeader() {
             </ul>
         </nav>
     </header>
+    </>
   )
 }
