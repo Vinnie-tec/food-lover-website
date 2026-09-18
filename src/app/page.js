@@ -4,18 +4,13 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <p>
-          Hello there! Welcome to our food lover community! We are passionate
-          about sharing delicious recipes, cooking tips, and culinary
-          adventures. Join us on this flavorful journey and let&apos;s explore
-          the world of food together!
-        </p>
-        <p>
-          <Link href="/about">Learn more about us</Link>
-        </p>
-      </main>
-    </div>
+    <main className={styles.page}>
+      <Link className={styles.link} href="/meals/share">
+        Share a Meal
+      </Link>
+      <Link className={styles.link} href="/community">
+        Community
+      </Link>
+    </main>
   );
 }
